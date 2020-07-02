@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+<title> Design WEb untuk parkir cerdas</title>
+<head>
+	<link href="https://fonts.googleapis.com/css?family=Raleway:300.400.500.700" rel = "stylesheet">
+	<script src = "https://use.fontawesome.com/939e9dd52c.js"></script>
+	
+	<link rel="stylesheet" href="index.css"/>
+</head>
+<body>
+	
+	<h1> Manajerial PLC</h1>
+	
+	<div id ="backcek">
+			<p id="silah"> Silahkan Masukan Tanggal dengan format DD-MM-YYYY</p>
+			<input type="text" name="tanggal" value="tanggall" id="in_tanggal">
+			<button id="btncek" onclick=sub_tanggal()><i class="fa fa-arrow-right" aria-hidden="true"> Cek Ketersediaan</i></button><br>
+			<br>
+	</div>
+	<div id="backbook">
+	<p id="pnam"> Silahkan Masukan nama, dari jam dan lama anda menggunakan plc</p>
+		<input type="text" id="in_nama" value="nama"><br>
+		<!-- <input type="text" name="in_nim" value="nim"><br> -->
+		<select id="in_jamke">
+		  <optgroup label="Jam Ke">
+			<option value="jamke7">7</option>
+			<option value="jamke8">8</option>
+			<option value="jamke9">9</option>
+			<option value="jamke10">10</option>
+			<option value="jamke11">11</option>
+			<option value="jamke12">12</option>
+			<option value="jamke13">13</option>
+			<option value="jamke14">14</option>
+			<option value="jamke15">15</option>
+			<option value="jamke16">16</option>
+			<option value="jamke17">17</option>
+		  </optgroup>
+		</select >
+		<select id="in_lama_jam">
+			<optgroup label = "Lama Menggunakan">
+				<option value="satujam"> 1 jam</option>
+				<option value="duajam"> 2 jam</option>
+				<option value="tigajam"> 3 jam</option>
+			</optgroup>
+		</select>
+		<button id="btnbook" onclick=book()><i class="fa fa-arrow-right" aria-hidden="true"> Booking Sekarang</i></button><br>
+		<br>
+	</div>
+	<div id="backkonf">
+		<p id="pkonf"> Silahkan Masukan password anda untuk konfirmasi sesuai dengan jam saat anda booking</p>
+		<input type="text" id="in_pass" value="masukan password"><br>
+		<button id="btnkonfirmasi" onclick=aktivasi()><i class="fa fa-arrow-right" aria-hidden="true">Aktivasi Penggunaan PLC</i></button><br>
+		<br>
+		<table style="width:70%" id="ex-table">
+		  <tr id="tabel">
+			<th>Nama</th>
+			<th>jam ke</th> 
+			
+			<th>kondisi</th>
+		  </tr>
+		  <tr>
+			<th id="nama7">kosong</th>
+			<th id="jamkee7">07</th>
+			
+			<th id="kondisi7">-</th>
+		  </tr>
+		  <tr>
+			<th id="nama8">kosong</th>
+			<th id="jamkee8">08</th>
+			
+			<th id="kondisi8">-</th>
+		  </tr>
+		  <tr>
+			<th id="nama9">kosong</th>
+			<th id="jamkee9">09</th>
+			
+			<th id="kondisi9">-</th>
+		  </tr>
+		  <tr>
+			<th id="nama10">kosong</th>
+			<th id="jamkee10">10</th>
+			
+			<th id="kondisi10">-</th>
+		  </tr>
+		  <tr>
+			<th id="nama11">kosong</th>
+			<th id="jamkee11">11</th>
+			
+			<th id="kondisi11">-</th>
+		  </tr>
+		  <tr>
+			<th id="nama12">kosong</th>
+			<th id="jamkee12">12</th>
+			
+			<th id="kondisi12">-</th>
+		  </tr>
+		  <tr>
+			<th id="nama13">kosong</th>
+			<th id="jamkee13">13</th>
+			
+			<th id="kondisi13">-</th>
+		  </tr>
+		  <tr>
+			<th id="nama14">kosong</th>
+			<th id="jamkee14">14</th>
+			
+			<th id="kondisi14">-</th>
+		  </tr>
+		  <tr>
+			<th id="nama15">kosong</th>
+			<th id="jamkee15">15</th>
+			
+			<th id="kondisi15">-</th>
+		  </tr>
+		  <tr>
+			<th id="nama16">kosong</th>
+			<th id="jamkee16">16</th>
+			
+			<th id="kondisi16">-</th>
+		  </tr>
+		  <tr>
+			<th id="nama17">kosong</th>
+			<th id="jamkee17">17</th>
+			
+			<th id="kondisi17">-</th>
+		  </tr>
+		  <tr>
+			<th id="nama18">kosong</th>
+			<th id="jamkee18">18</th>
+			
+			<th id="kondisi18">-</th>
+		  </tr>
+		 </table> 
+	</div>
+	<div id="logo"></div>
+	
+	
+	<script src="https://www.gstatic.com/firebasejs/5.7.2/firebase.js"></script>
+	<script>
+	  // Initialize Firebase
+	  var config = {
+		apiKey: "AIzaSyA45kcEW-YQELr4xSAkbKzLtPiMcY86d6Q",
+		authDomain: "manajerial-plc.firebaseapp.com",
+		databaseURL: "https://manajerial-plc.firebaseio.com",
+		projectId: "manajerial-plc",
+		storageBucket: "manajerial-plc.appspot.com",
+		messagingSenderId: "4524869581"
+	  };
+	  firebase.initializeApp(config);
+	</script>
+	<script src="index.js"></script>
+	
+	
+	
+</body>
+</html>
